@@ -1,0 +1,11 @@
+# dbt
+models/target/
+models/dbt_packages/
+models/logs/
+**/.user.yml
+
+# Python / editors
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

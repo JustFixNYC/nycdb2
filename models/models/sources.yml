@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: fixture_hello
+    description: Loaded by opendata-etl from datasets/fixture_hello.yml (table greetings).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: greetings
+        description: Fixture rows for smoke tests.

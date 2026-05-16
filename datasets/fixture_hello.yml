@@ -1,0 +1,20 @@
+name: fixture_hello
+description: |
+  Tiny two-column CSV used for loader and dbt wiring smoke tests.
+  Canonical bytes live in fixtures/hello.csv; the URL points at this repo on GitHub
+  so extractors can fetch the same file after publish.
+schedule: "0 7 * * *"
+freshness_sla_hours: 168
+schema_contract: freeze
+tables:
+  - name: greetings
+    source:
+      type: csv
+      url: "https://raw.githubusercontent.com/JustFixNYC/nycdb2/main/fixtures/hello.csv"
+    columns:
+      - name: id
+        type: bigint
+      - name: msg
+        type: text
+    indexes:
+      - [id]

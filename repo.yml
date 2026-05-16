@@ -1,0 +1,7 @@
+name: nycdb2
+display_name: NYC housing (nycdb2)
+default_schema: nyc_housing
+owners:
+  - housing-data@justfix.nyc
+framework_version: ">=0.0.0,<2.0"
+dependencies: []

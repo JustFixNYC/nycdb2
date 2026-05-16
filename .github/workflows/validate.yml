@@ -1,0 +1,35 @@
+# Validate YAML in this repo against opendata-etl JSON Schemas.
+# Pin: update the `ref` below when you need a stable schema contract.
+name: Validate definitions
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout nycdb2
+        uses: actions/checkout@v4
+
+      - name: Checkout opendata-etl (schemas + validate_definitions.py)
+        uses: actions/checkout@v4
+        with:
+          repository: JustFixNYC/opendata-etl
+          path: opendata-etl
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install framework (validator deps)
+        working-directory: opendata-etl
+        run: pip install -e ".[dev]"
+
+      - name: JSON Schema validate repo tree
+        working-directory: opendata-etl
+        run: python3 scripts/validate_definitions.py --repo "${{ github.workspace }}"
