@@ -13,6 +13,10 @@ This repository holds dataset definitions, dbt models, API endpoint specs, and n
 | `docs/` | Markdown aggregated into the framework MkDocs site |
 | `fixtures/` | Small static files referenced by dataset YAML |
 
+## Step 15 datasets
+
+Representative NYC housing sources (large CSV, public S3, shapefile, protected S3, multi-table bundle) are documented in [step-15-datasets.md](step-15-datasets.md).
+
 ## Local validation
 
 From a checkout of [opendata-etl](https://github.com/JustFixNYC/opendata-etl), with dev dependencies installed:

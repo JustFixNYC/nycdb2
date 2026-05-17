@@ -1,0 +1,21 @@
+"registrationcontactid","registrationid","type","contactdescription","corporationname","title","firstname","middleinitial","lastname","businesshousenumber","businessstreetname","businessapartment","businesscity","businessstate","businesszip"
+"12473203","124732","CorporateOwner","GEN.PART","KOSCAL 59 LLC",,,,,"346","3 59TH ST","1","NEW YORK","NY","10022"
+"12473204","124732","Agent","GEN.PART","TZM REALTY PROPERTIES LLC",,"ANTHONY",,"ZACHARIADIS","346","E 59TH ST","1","NEW YORK","NY","10022"
+"12473205","124732","HeadOfficer","GEN.PART",,"MEMBER","KOSTAS",,"ZACHARIADIS","346","E 59TH ST","1","NEW YORK","NY","10022"
+"12473206","124732","Officer","GEN.PART",,"MANAGER","ANTHONY",,"ZAHARIADIS","346","E 59TH ST","1","NEW YORK","NY","10022"
+"12473213","124732","SiteManager","GEN.PART",,,"ROSALIO",,"PEREA",,,,,,
+"13157203","131572","CorporateOwner","GEN.PART","GRAY ROCK EQUITIES LLC",,,,,"207-21","MELISSA CT",,"Bayside","NY","11360"
+"13157204","131572","Agent","GEN.PART","REGAL PROPERTY MANAGEMENT INC.",,"CHUN",,"YUNG","18","WEST 25 STREET","12 FL","New York","NY","10010"
+"13157205","131572","HeadOfficer","GEN.PART",,"PRINCIPAL","YONG","R","KIM","141","1ST AVE",,"New York","NY","10003"
+"13157206","131572","Officer","GEN.PART",,"MEMBER","HAN SANG",,"BAE","141","1ST AVE",,"New York","NY","10003"
+"10980803","109808","CorporateOwner","CORP","1576.FIRST AVENUE, INC",,,,,"400","E 82 ST","STORE","NEW YORK","NY","10028"
+"10980804","109808","Agent","CORP","1576 FIRST AVE INC",,"WILLIAM","C","BAILEY","400","E 82 ST","STORE","NEW YORK","NY","10028"
+"10980805","109808","HeadOfficer","CORP",,"TREASURER","WILLIAM","C","BAILEY","400","E. 82 ST","STORE","NEW YORK","NY","10028"
+"10980806","109808","Officer","CORP",,"PRESIDENT","VINCENT","J","GALLO","706","FOREST AVE",,"STATEN ISLAND","NY","10310"
+"10980810","109808","Shareholder","CORP",,,"WILLIAM","C","BAILEY","400","E.82 STREET","STORE","NEW YORK","NY","10028"
+"10980811","109808","Shareholder","CORP",,,"VINCENT","J","GALLO","706","FOREST AVENUE",,"STATEN ISLAND","NY","10310"
+"10980813","109808","SiteManager","CORP",,,"WILLIAM",,"BAILEY",,,,,,
+"10115204","101152","Agent","GEN.PART","LANGSAM PROPERTY SERVICES CORP",,"BRIAN",,"LINA","1601","BRONXDALE AVE","201","Bronx","NY","10462"
+"30071211","300712","Shareholder","CORP",,,"MIRIAM",,"IFERGAN","14724","68 ROAD",,"Flushing","NY","11367"
+"32435905","324359","HeadOfficer","GEN.PART",,"Ms","Suzanne","M","Stassevitch","3727","Cesar Chavez",,"San Francisco","CA","94110"
+"13949613","139496","SiteManager","GEN.PART",,,"Nicholas",,"Ritacco",,,,,,

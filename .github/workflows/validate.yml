@@ -33,3 +33,20 @@ jobs:
       - name: JSON Schema validate repo tree
         working-directory: opendata-etl
         run: python3 scripts/validate_definitions.py --repo "${{ github.workspace }}"
+
+      - name: Validate column contracts against committed fixtures
+        working-directory: opendata-etl
+        run: |
+          REPO="${{ github.workspace }}"
+          python3 scripts/validate_definitions.py --repo "$REPO" \
+            --sample-csv "$REPO/fixtures/hpd_violations_sample.csv" \
+            --dataset hpd_violations --table hpd_violations
+          python3 scripts/validate_definitions.py --repo "$REPO" \
+            --sample-csv "$REPO/fixtures/nycc_sample.csv" \
+            --dataset nycc --table nycc
+          python3 scripts/validate_definitions.py --repo "$REPO" \
+            --sample-csv "$REPO/fixtures/hpd_registrations_sample.csv" \
+            --dataset hpd_registrations --table hpd_registrations
+          python3 scripts/validate_definitions.py --repo "$REPO" \
+            --sample-csv "$REPO/fixtures/hpd_contacts_sample.csv" \
+            --dataset hpd_registrations --table hpd_contacts

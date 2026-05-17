@@ -1,0 +1,34 @@
+name: nycc
+description: |
+  NYC City Council districts (single layer from DCP BYTES). Tier B E2E shapefile (~860 KB zip).
+  Metadata: https://www.nyc.gov/content/planning/pages/resources/datasets/city-council
+schedule: "0 9 1 * *"
+schema_contract: freeze
+tables:
+  - name: nycc
+    geospatial: true
+    source:
+      type: shapefile
+      url: "https://s-media.nyc.gov/agencies/dcp/assets/files/zip/data-tools/bytes/city-council/nycc_26a.zip"
+      path: nycc_26a/nycc
+      source_crs: "EPSG:2263"
+      target_crs: "EPSG:2263"
+    column_aliases:
+      shapeleng: shape_leng
+      shapearea: shape_area
+      wkt: geom
+    columns:
+      - name: coundist
+        type: integer
+        source_header: CounDist
+      - name: shape_leng
+        type: double
+        source_header: Shape_Leng
+      - name: shape_area
+        type: double
+        source_header: Shape_Area
+      - name: geom
+        type: geometry
+        source_header: WKT
+    indexes:
+      - [geom]

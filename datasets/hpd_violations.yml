@@ -1,0 +1,99 @@
+name: hpd_violations
+description: |
+  HPD housing violations (~4M rows). NYC Open Data CSV download (Tier C full load).
+  CI uses fixtures/hpd_violations_sample.csv (SODA API subset) for column contract checks.
+schema_contract: evolve
+tables:
+  - name: hpd_violations
+    source:
+      type: csv
+      url: "https://data.cityofnewyork.us/api/views/wvxf-dwi5/rows.csv?accessType=DOWNLOAD"
+    column_aliases:
+      zip: postcode
+      boro: borough
+    columns:
+      - name: violationid
+        type: integer
+      - name: buildingid
+        type: integer
+      - name: registrationid
+        type: integer
+      - name: boroid
+        type: text
+      - name: borough
+        type: text
+      - name: housenumber
+        type: text
+      - name: lowhousenumber
+        type: text
+      - name: highhousenumber
+        type: text
+      - name: streetname
+        type: text
+      - name: streetcode
+        type: text
+      - name: postcode
+        type: text
+      - name: apartment
+        type: text
+      - name: story
+        type: text
+      - name: block
+        type: integer
+      - name: lot
+        type: integer
+      - name: class
+        type: text
+      - name: inspectiondate
+        type: date
+      - name: approveddate
+        type: date
+      - name: originalcertifybydate
+        type: date
+      - name: originalcorrectbydate
+        type: date
+      - name: newcertifybydate
+        type: date
+      - name: newcorrectbydate
+        type: date
+      - name: certifieddate
+        type: date
+      - name: ordernumber
+        type: text
+      - name: novid
+        type: integer
+      - name: novdescription
+        type: text
+      - name: novissueddate
+        type: date
+      - name: currentstatusid
+        type: integer
+      - name: currentstatus
+        type: text
+      - name: currentstatusdate
+        type: date
+      - name: novtype
+        type: text
+      - name: violationstatus
+        type: text
+      - name: rentimpairing
+        type: boolean
+      - name: latitude
+        type: numeric
+      - name: longitude
+        type: numeric
+      - name: communityboard
+        type: text
+      - name: councildistrict
+        type: integer
+      - name: censustract
+        type: text
+      - name: bin
+        type: text
+      - name: bbl
+        type: text
+      - name: nta
+        type: text
+    indexes:
+      - [violationid]
+      - [buildingid]

@@ -1,0 +1,53 @@
+name: hpd_vacateorders
+description: |
+  HPD vacate orders (protected S3 snapshot). Local/manual E2E only — requires AWS IAM in .env.
+  No Postgres primary key (heap table for Step 15).
+schema_contract: evolve
+tables:
+  - name: hpd_vacateorders
+    source:
+      type: s3_object
+      bucket: opendata-etl-testing
+      key: hpd_vacateorders.csv
+      credential: opendata_etl_testing
+    columns:
+      - name: buildingid
+        type: integer
+      - name: registrationid
+        type: integer
+      - name: borough
+        type: text
+      - name: number
+        type: text
+      - name: street
+        type: text
+      - name: vacateordernumber
+        type: integer
+      - name: primaryvacatereason
+        type: text
+      - name: vacatetype
+        type: text
+      - name: vacateeffectivedate
+        type: date
+      - name: rescinddate
+        type: date
+      - name: numberofvacatedunits
+        type: integer
+      - name: postcode
+        type: text
+      - name: latitude
+        type: numeric
+      - name: longitude
+        type: numeric
+      - name: communityboard
+        type: integer
+      - name: councildistrict
+        type: integer
+      - name: censustract
+        type: text
+      - name: bin
+        type: text
+      - name: bbl
+        type: text
+      - name: nta
+        type: text

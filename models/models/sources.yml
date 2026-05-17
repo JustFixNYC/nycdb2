@@ -7,3 +7,34 @@ sources:
     tables:
       - name: greetings
         description: Fixture rows for smoke tests.
+
+  - name: hpd_violations
+    description: HPD violations (datasets/hpd_violations.yml).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: hpd_violations
+
+  - name: rentstab_v2
+    description: Rent-stabilized unit counts by BBL (datasets/rentstab_v2.yml).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: rentstab_v2
+
+  - name: nycc
+    description: City Council districts (datasets/nycc.yml).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: nycc
+
+  - name: hpd_vacateorders
+    description: HPD vacate orders (datasets/hpd_vacateorders.yml).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: hpd_vacateorders
+
+  - name: hpd_registrations
+    description: HPD registrations bundle (datasets/hpd_registrations.yml).
+    schema: "{{ var('target_schema') }}"
+    tables:
+      - name: hpd_registrations
+      - name: hpd_contacts

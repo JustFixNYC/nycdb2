@@ -1,0 +1,87 @@
+name: hpd_registrations
+description: |
+  HPD registrations and contacts (multi-table bundle). Tier C full load; optional subset fixtures for CI.
+schema_contract: evolve
+tables:
+  - name: hpd_registrations
+    source:
+      type: csv
+      url: "https://data.cityofnewyork.us/api/views/tesw-yqqr/rows.csv?accessType=DOWNLOAD"
+    columns:
+      - name: registrationid
+        type: integer
+      - name: buildingid
+        type: integer
+      - name: boroid
+        type: integer
+      - name: boro
+        type: text
+      - name: housenumber
+        type: text
+      - name: lowhousenumber
+        type: text
+      - name: highhousenumber
+        type: text
+      - name: streetname
+        type: text
+      - name: streetcode
+        type: integer
+      - name: zip
+        type: text
+      - name: block
+        type: integer
+      - name: lot
+        type: integer
+      - name: bin
+        type: text
+      - name: communityboard
+        type: integer
+      - name: lastregistrationdate
+        type: date
+      - name: registrationenddate
+        type: date
+    indexes:
+      - [registrationid]
+  - name: hpd_contacts
+    source:
+      type: csv
+      url: "https://data.cityofnewyork.us/api/views/feu5-w2e2/rows.csv?accessType=DOWNLOAD"
+    columns:
+      - name: registrationcontactid
+        type: integer
+      - name: registrationid
+        type: integer
+      - name: type
+        type: text
+      - name: contactdescription
+        type: text
+      - name: corporationname
+        type: text
+      - name: title
+        type: text
+      - name: firstname
+        type: text
+      - name: middleinitial
+        type: text
+      - name: lastname
+        type: text
+      - name: businesshousenumber
+        type: text
+      - name: businessstreetname
+        type: text
+      - name: businessapartment
+        type: text
+      - name: businesscity
+        type: text
+      - name: businessstate
+        type: text
+      - name: businesszip
+        type: text
+    indexes:
+      - [registrationcontactid]
+      - [registrationid]
+    foreign_keys:
+      - columns: [registrationid]
+        references:
+          table: hpd_registrations
+          columns: [registrationid]

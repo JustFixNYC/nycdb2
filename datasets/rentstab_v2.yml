@@ -1,0 +1,45 @@
+name: rentstab_v2
+description: |
+  Rent-stabilized unit counts by BBL (JustFix public S3 CSV). Tier B E2E candidate (~24 MB).
+schedule: "0 8 * * 1"
+schema_contract: freeze
+tables:
+  - name: rentstab_v2
+    source:
+      type: s3_object
+      bucket: justfix-data
+      key: rentstab_counts_from_doffer_2024.csv
+      credential: justfix_data_public
+    columns:
+      - name: ucbbl
+        type: text
+      - name: uc2018
+        type: integer
+      - name: pdfsoa2018
+        type: text
+      - name: uc2019
+        type: integer
+      - name: pdfsoa2019
+        type: text
+      - name: uc2020
+        type: integer
+      - name: pdfsoa2020
+        type: text
+      - name: uc2021
+        type: integer
+      - name: pdfsoa2021
+        type: text
+      - name: uc2022
+        type: integer
+      - name: pdfsoa2022
+        type: text
+      - name: uc2023
+        type: integer
+      - name: pdfsoa2023
+        type: text
+      - name: uc2024
+        type: integer
+      - name: pdfsoa2024
+        type: text
+    indexes:
+      - [ucbbl]

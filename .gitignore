@@ -9,3 +9,7 @@ models/logs/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Accidental full-dataset downloads (Tier A fixtures must stay small; see docs/step-15-datasets.md)
+fixtures/*_full.csv
+fixtures/hpd_violations.csv
