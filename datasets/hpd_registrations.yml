@@ -40,8 +40,9 @@ tables:
         type: date
       - name: registrationenddate
         type: date
-    indexes:
-      - [registrationid]
+    indexes:  
+    - - registrationid
+    - - buildingid
   - name: hpd_contacts
     source:
       type: csv
@@ -78,10 +79,5 @@ tables:
       - name: businesszip
         type: text
     indexes:
-      - [registrationcontactid]
-      - [registrationid]
-    foreign_keys:
-      - columns: [registrationid]
-        references:
-          table: hpd_registrations
-          columns: [registrationid]
+    - - type
+    - - registrationid
