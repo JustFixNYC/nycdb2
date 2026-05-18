@@ -13,3 +13,7 @@ __pycache__/
 # Accidental full-dataset downloads (Tier A fixtures must stay small; see docs/step-15-datasets.md)
 fixtures/*_full.csv
 fixtures/hpd_violations.csv
+
+# Step 16 legacy importer output (review locally; do not commit by default)
+import_drafts/
+import_reports/
