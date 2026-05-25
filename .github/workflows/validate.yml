@@ -50,3 +50,6 @@ jobs:
           python3 scripts/validate_definitions.py --repo "$REPO" \
             --sample-csv "$REPO/fixtures/hpd_contacts_sample.csv" \
             --dataset hpd_registrations --table hpd_contacts
+
+      - name: Run legacy importer tests
+        run: PYTHONPATH="${{ github.workspace }}/opendata-etl:${{ github.workspace }}" python3 -m pytest -q tests/test_import_legacy_*.py tests/test_nycdb_repo.py

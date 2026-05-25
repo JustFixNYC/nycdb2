@@ -12,10 +12,16 @@ This repository holds dataset definitions, dbt models, API endpoint specs, and n
 | `api_endpoints/` | Read-only HTTP API route definitions |
 | `docs/` | Markdown aggregated into the framework MkDocs site |
 | `fixtures/` | Small static files referenced by dataset YAML |
+| `legacy_nycdb_importer/` | One-time migration aid for drafting YAML from legacy nycdb |
+| `scripts/import_legacy_nycdb.py` | CLI wrapper for the legacy importer |
 
 ## Step 15 datasets
 
 Representative NYC housing sources (large CSV, public S3, shapefile, protected S3, multi-table bundle) are documented in [step-15-datasets.md](step-15-datasets.md).
+
+## Legacy importer
+
+The one-time nycdb migration importer lives in this repo because it emits nycdb2 draft definitions. See [legacy-nycdb-importer.md](legacy-nycdb-importer.md).
 
 ## Local validation
 
